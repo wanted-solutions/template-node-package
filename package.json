@@ -7,16 +7,11 @@
     "build": "yarn lint && yarn test && npx webpack --mode=production",
     "build:dev": "npx webpack --mode=development",
     "format": "npx eslint src/**/*.ts --fix",
-    "init": "npx husky init",
+    "init": "npx husky",
     "lint": "npx eslint src/**/*.ts",
     "package:publish": "yarn publish --access public",
     "test": "npx jest",
     "prepare": "husky"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "concurrently \"yarn lint\" \"yarn test\""
-    }
   },
   "repository": {
     "type": "git",
@@ -45,5 +40,10 @@
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-node-externals": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo \"HW!!!\""
+    }
   }
 }
